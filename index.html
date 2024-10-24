@@ -272,7 +272,7 @@
 
           <p class="section-subtitle">My skills</p>
 
-          <h2 class="h3 section-title">What My Dancing Skills Included?</h2>
+          <h2 class="h3 section-title">What Do My Dancing Skills Include?</h2>
 
           <p class="section-text">
             I am a skilled Kathak dancer with deep classical expertise, specializing in intricate footwork, fast spins (chakkars), and expressive storytelling (abhinaya). 
@@ -506,14 +506,6 @@
             <li class="contact-list-item">
 
               <div class="contact-item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-
-            </li>
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
                 <ion-icon name="mail-outline"></ion-icon>
               </div>
 
@@ -530,8 +522,7 @@
 
         </div>
 
-        <form action="" class="contact-form">
-
+       <form id="sendEmailForm" action="javascript:void(0);" class="contact-form" onsubmit="sendEmail()">
           <div class="form-wrapper">
 
             <label for="name" class="form-label">Name</label>
@@ -553,7 +544,7 @@
             <div class="input-wrapper">
 
               <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
-                class="input-field">
+          class="input-field">
 
               <ion-icon name="mail"></ion-icon>
 
@@ -582,7 +573,7 @@
             <div class="input-wrapper">
 
               <textarea name="message" id="message" required placeholder="Write message..."
-                class="input-field"></textarea>
+          class="input-field"></textarea>
 
               <ion-icon name="chatbubbles"></ion-icon>
 
@@ -591,8 +582,9 @@
           </div>
 
           <button type="submit" class="btn btn-primary">Send</button>
-
         </form>
+
+        
 
       </section>
 
