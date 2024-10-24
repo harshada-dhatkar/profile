@@ -90,10 +90,11 @@ if (localStorage.getItem("theme") === "light_theme") {
 function sendEmail() {
   const recipient = "harshada.dhatkar@gmail.com";
   const name = document.getElementById('sendEmailForm').elements['name'].value
-  const toEmail = document.getElementById('sendEmailForm').elements['email'].value
+  const ccEmail = document.getElementById('sendEmailForm').elements['email'].value
   const phone = document.getElementById('sendEmailForm').elements['phone'].value
-  const subject = "Hello from " + name + "!";
-  const body = document.getElementById('sendEmailForm').elements['message'].value;
-
-  window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const subject = "Hello from " + name + "& reach me out on " + phone + "!";
+  const body = document.getElementById('sendEmailForm').elements['message'].value + "From:" + name + " Reach me out on: " + phone;
+  document.getElementById('sendEmailForm').reset();
+  
+  window.location.href = `mailto:${recipient}?cc=${encodeURIComponent(ccEmail)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
